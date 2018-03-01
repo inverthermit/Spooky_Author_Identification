@@ -1,0 +1,4 @@
+{
+    "test_csv":"data/test.csv",
+    "train_csv":"data/train.csv"
+}
