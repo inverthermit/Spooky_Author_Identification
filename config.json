@@ -1,4 +1,6 @@
 {
-    "test_csv":"data/test.csv",
-    "train_csv":"data/train2.csv"
+    "test_csv":"data/test2utf8.csv",
+    "train_csv":"data/train2.csv",
+
+    "tmp":"tmp/"
 }

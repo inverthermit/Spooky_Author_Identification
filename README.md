@@ -34,21 +34,21 @@ In the first iteration of this project, traditional NLP techniques are used for 
 
 (2) Fit the tokenized words into Bag of Words model. This is actually done by the CountVectorizer using LemmaTokenizer in the first step.
 
-(3) Feature selection. Not all the words are common enough to be used as a feature. If all the words are counted as a feature, then the dimension of the feature space will be too large, which can greatly slow down the next classification training steps. A Variance Threshold is set to 0.98 in this case. This leaves 161 features from the corpus.
+(3) Stopwords. Discard all the stopwords using the dictionary of nltk.corpus stopwords.
 
-(4) Classification and evaluation. Just simply use Sklearn library to do the classification. Random Forest is used in this case. After training, use cross validation to generate result reports.
+(4) Feature selection. Not all the words are common enough to be used as a feature. If all the words are counted as a feature, then the dimension of the feature space will be too large, which can greatly slow down the next classification training steps. A Variance Threshold is set to 0.99 in this case. This leaves 198 features from the corpus.
+
+(5) Classification and evaluation. Just simply use Sklearn library to do the classification. Random Forest is used in this case. After training, use cross validation to generate result reports.
 
 ##### Evaliation:
 
 Random Forest:
-
+```
 Training Score: 0.985954338832
-
 Confusion Matrix:
 [[5568 1093 1239]
  [1784 2981  870]
  [2106 1084 2854]]
-
  10-fold Cross Validation Report:
              precision    recall  f1-score   support
 
@@ -57,7 +57,7 @@ Confusion Matrix:
           c       0.58      0.47      0.52      6044
 
 avg / total       0.58      0.58      0.58     19579
-
+```
 ANN:
 ```
 0.987026916594
